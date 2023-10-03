@@ -1,0 +1,98 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "AHY Ucapkan Selamat ke Anies dan Cak Imins",
+      "slug": "default",
+      "content": "Content 1",
+      "imgUrl": "https://akcdn.detik.net.id/visual/2023/08/11/pernyataan-sikap-ahy-perihal-putusan-ma-5_169.jpeg?w=650&q=90",
+      "createdAt": "2023-09-05T08:46:57.763Z",
+      "updatedAt": "2023-09-05T08:46:57.763Z",
+      "categoryId": 1,
+      "authorId": 1
+    },
+    {
+      "title": "anjai",
+      "imgUrl": "https://images.unsplash.com/photo-1575936123452-b67c3203c357?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D&w=1000&q=80",
+      "content": "dadada",
+      "slug": "default",
+      "createdAt": "2023-09-04T20:57:35.812Z",
+      "updatedAt": "2023-09-04T20:57:35.812Z",
+      "categoryId": 1,
+      "authorId": 1,
+      "id": 3
+    },
+    {
+      "title": "dadada",
+      "content": "aa",
+      "imgUrl": "https://awsimages.detik.net.id/community/media/visual/2022/11/03/gambar-dekoratif-2.jpeg?w=1200",
+      "categoryId": 1,
+      "authorId": 1,
+      "slug": "default",
+      "createdAt": "2023-09-08T08:17:02.565Z",
+      "updatedAt": "2023-09-08T08:17:02.565Z",
+      "id": 4
+    },
+    {
+      "title": "adadadada",
+      "content": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaavvvv",
+      "imgUrl": "https://cdn.discordapp.com/attachments/1120589991630864454/1142466527434649620/image.png",
+      "categoryId": "1",
+      "authorId": 1,
+      "slug": "default",
+      "createdAt": "2023-09-08T08:18:27.356Z",
+      "updatedAt": "2023-09-08T08:18:27.356Z",
+      "id": 5
+    },
+    {
+      "title": "",
+      "content": "",
+      "imgUrl": "",
+      "categoryId": 1,
+      "authorId": 1,
+      "slug": "default",
+      "createdAt": "2023-09-08T04:25:05.723Z",
+      "updatedAt": "2023-09-08T04:25:05.723Z",
+      "id": 6
+    },
+    {
+      "title": "",
+      "content": "",
+      "imgUrl": "",
+      "categoryId": "1",
+      "authorId": 1,
+      "slug": "default",
+      "createdAt": "2023-09-08T04:25:39.570Z",
+      "updatedAt": "2023-09-08T04:25:39.570Z",
+      "id": 7
+    },
+    {
+      "title": "aaa",
+      "content": "sssss",
+      "imgUrl": "https://www.nps.gov/meve/planyourvisit/images/kiva-room-for-nps_960px.jpg?maxwidth=1300&maxheight=1300&autorotate=false",
+      "categoryId": "1",
+      "authorId": 1,
+      "slug": "default",
+      "createdAt": "2023-09-08T08:32:16.441Z",
+      "updatedAt": "2023-09-08T08:32:16.441Z",
+      "id": 8
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Beritattsss",
+      "createdAt": "2023-09-05T08:47:26.824Z",
+      "updatedAt": "2023-09-05T08:47:26.824Z"
+    }
+  ],
+  "tags": [
+    {
+      "id": 1,
+      "postId": 1,
+      "name": "AHY",
+      "createdAt": "2022-10-10",
+      "updatedAt": "2022-10-10"
+    }
+  ]
+}
