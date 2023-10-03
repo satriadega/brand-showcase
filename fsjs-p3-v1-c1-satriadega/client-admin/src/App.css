@@ -1,0 +1,30 @@
+.grayish {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+.overflowy {
+  height: 100px;
+  background-color: blue;
+  width: 200px;
+  overflow-y: scroll;
+}
+
+.modal-custom {
+  margin: 0 auto;
+}
+
+.verticalCenter {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.wrap {
+  word-wrap: break-word;
+}
