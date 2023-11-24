@@ -34,46 +34,48 @@ const CategoryView = () => {
         <td>{createdAt[0]}</td>
         <td>{updatedAt[0]}</td>
         <td>
-          <a href="" className="ms-3">
-            <button
-              style={{ width: "60px" }}
-              className="bg-blue-600 py-2 rounded-lg "
-              onClick={async (e) => {
-                e.preventDefault();
-                setIsEdit(true);
-                try {
-                  const response = await fetch(
-                    `${API_URL}/categories/` + el.id,
-                    {
-                      method: "GET",
-                      headers: {
-                        access_token: localStorage.access_token,
-                      },
-                    }
-                  );
-                  const result = await response.json();
-                  setCategory(result);
-                  handleOpen();
-                } catch (error) {
-                  console.error("Error:", error);
-                }
-              }}
-            >
-              edit
-            </button>
-          </a>
-          <a href="" className="ms-3">
-            <button
-              style={{ width: "60px" }}
-              className="bg-red-600 py-2 rounded-lg "
-              onClick={(e) => {
-                e.preventDefault();
-                dispatch(deleteCategory(el.id));
-              }}
-            >
-              delete
-            </button>
-          </a>
+          <div className="flex gap-2">
+            <a href="" className="">
+              <button
+                style={{ width: "60px" }}
+                className="bg-blue-600 py-2 rounded-lg "
+                onClick={async (e) => {
+                  e.preventDefault();
+                  setIsEdit(true);
+                  try {
+                    const response = await fetch(
+                      `${API_URL}/categories/` + el.id,
+                      {
+                        method: "GET",
+                        headers: {
+                          access_token: localStorage.access_token,
+                        },
+                      }
+                    );
+                    const result = await response.json();
+                    setCategory(result);
+                    handleOpen();
+                  } catch (error) {
+                    console.error("Error:", error);
+                  }
+                }}
+              >
+                edit
+              </button>
+            </a>
+            <a href="" className="">
+              <button
+                style={{ width: "60px" }}
+                className="bg-red-600 py-2 rounded-lg "
+                onClick={(e) => {
+                  e.preventDefault();
+                  dispatch(deleteCategory(el.id));
+                }}
+              >
+                delete
+              </button>
+            </a>
+          </div>
         </td>
       </tr>
     );
@@ -81,14 +83,16 @@ const CategoryView = () => {
 
   return (
     <>
-      <h2 style={{ textAlign: "center" }} className="font-bold text-2xl mt-10">
+      <h2 style={{ textAlign: "center" }} className="text-3xl mt-10">
         Categories List
       </h2>
       <div
         className="table-responsive-lg"
         style={{
-          width: "100%",
+          width: "94%",
           marginTop: "40px",
+          marginLeft: "3%",
+          marginRight: "3%",
         }}
       >
         <div className="d-flex justify-content-end mr-4">

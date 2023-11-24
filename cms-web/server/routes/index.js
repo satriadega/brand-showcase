@@ -5,9 +5,6 @@ const ControllerPost = require("../controllers/controllerPost");
 const ControllerCategory = require("../controllers/controllerCategory");
 const authentication = require("../middleware/authentication");
 
-router.get("/test", (req, res) => {
-  res.send("ini test");
-});
 router.post("/register", ControllerUser.createUser);
 router.post("/login", ControllerUser.login);
 router.get("/posts", ControllerPost.getPosts);

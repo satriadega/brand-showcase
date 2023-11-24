@@ -132,7 +132,7 @@ const CreateEditPost = ({ show, onClose, isEdit, post, setIsEdit }) => {
 
   return (
     <>
-      {categoriesLoading && <Loading />}
+      {/* {categoriesLoading && <Loading />} */}
 
       <Modal show={show} onHide={onClose}>
         <Form

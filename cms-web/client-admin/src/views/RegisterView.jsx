@@ -45,17 +45,17 @@ const RegisterView = () => {
   };
   return (
     <>
+      <h2 className="text-3xl mt-10 mb-8 text-center">Register Admin</h2>
       <Form
-        className=" font-bold mt-5"
+        className=""
         onSubmit={handleSubmit}
         style={{
           maxWidth: "600px",
-          marginLeft: "80px",
+          margin: "0 auto",
           padding: "36px",
           borderRadius: "9px",
         }}
       >
-        <h2 className="text-xl mb-3">Register Admin</h2>
         <Form.Group as={Row} className="mb-3" controlId="formBasicUsername">
           <Form.Label column sm={3}>
             Username

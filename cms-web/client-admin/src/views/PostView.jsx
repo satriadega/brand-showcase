@@ -27,13 +27,10 @@ const PostView = () => {
           <div style={{ width: "200px" }}>{el.title}</div>
         </td>
         <td>
-          <img src={el.imgUrl} style={{ width: "380px" }} className="rounded" />
+          <img src={el.imgUrl} style={{ width: "100%" }} className="rounded" />
         </td>
         <td>
-          <div
-            className=" wrap"
-            style={{ width: "300px", overflowY: "auto", height: "220px" }}
-          >
+          <div className=" wrap" style={{ width: "300px", overflowY: "auto" }}>
             <p>{el.content}</p>
           </div>
         </td>
@@ -52,43 +49,45 @@ const PostView = () => {
           ))}
         </td>
         <td>
-          <a href="" className="ms-3">
-            <button
-              style={{ width: "60px" }}
-              className="bg-blue-600 py-2 rounded-lg mb-3"
-              onClick={async (e) => {
-                e.preventDefault();
-                setIsEdit(true);
-                try {
-                  const response = await fetch(`${API_URL}/posts/` + el.id, {
-                    method: "GET",
-                    headers: {
-                      access_token: localStorage.access_token,
-                    },
-                  });
-                  const result = await response.json();
-                  setPost(result);
-                  handleOpen();
-                } catch (error) {
-                  console.error("Error:", error);
-                }
-              }}
-            >
-              edit
-            </button>
-          </a>
-          <a href="" className="ms-3">
-            <button
-              className="bg-red-600 py-2 rounded-lg"
-              style={{ width: "60px" }}
-              onClick={(e) => {
-                e.preventDefault();
-                dispatch(deletePost(el.id));
-              }}
-            >
-              delete
-            </button>
-          </a>
+          <div className="flex gap-2">
+            <a href="" className="">
+              <button
+                style={{ width: "60px" }}
+                className="bg-blue-600 py-2 rounded-lg mb-3"
+                onClick={async (e) => {
+                  e.preventDefault();
+                  setIsEdit(true);
+                  try {
+                    const response = await fetch(`${API_URL}/posts/` + el.id, {
+                      method: "GET",
+                      headers: {
+                        access_token: localStorage.access_token,
+                      },
+                    });
+                    const result = await response.json();
+                    setPost(result);
+                    handleOpen();
+                  } catch (error) {
+                    console.error("Error:", error);
+                  }
+                }}
+              >
+                edit
+              </button>
+            </a>
+            <a href="" className="">
+              <button
+                className="bg-red-600 py-2 rounded-lg"
+                style={{ width: "60px" }}
+                onClick={(e) => {
+                  e.preventDefault();
+                  dispatch(deletePost(el.id));
+                }}
+              >
+                delete
+              </button>
+            </a>
+          </div>
         </td>
       </tr>
     );
@@ -96,15 +95,17 @@ const PostView = () => {
 
   return (
     <>
-      <h2 style={{ textAlign: "center" }} className="font-bold text-2xl mt-10">
+      <h2 style={{ textAlign: "center" }} className="text-3xl mt-10">
         Posts List
       </h2>
 
       <div
         className="table-responsive-lg"
         style={{
-          width: "100%",
+          width: "94%",
           marginTop: "40px",
+          marginLeft: "3%",
+          marginRight: "3%",
         }}
       >
         <div className="d-flex justify-content-end mr-4">
@@ -120,13 +121,13 @@ const PostView = () => {
           </Button>
         </div>
         <div className="overflow-x-auto">
-          <table className="table mt-5 table-hover table-dark ">
+          <table className="table mt-5 table-hover table-dark">
             <thead>
               <tr>
                 <th>#</th>
                 <th>Title</th>
-                <th>Image</th>
-                <th style={{ width: "30%" }}>Content</th>
+                <th style={{ width: "300px" }}>Image</th>
+                <th style={{ minWidth: "30%" }}>Content</th>
                 <th>Category</th>
                 <th>Created By</th>
                 <th>Tags</th>

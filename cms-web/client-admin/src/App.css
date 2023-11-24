@@ -28,3 +28,15 @@
 .wrap {
   word-wrap: break-word;
 }
+
+table {
+  table-layout: fixed;
+}
+
+td {
+  word-wrap: break-word;
+}
+
+th {
+  width: 150px;
+}

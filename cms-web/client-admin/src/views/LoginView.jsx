@@ -33,11 +33,11 @@ const LoginView = () => {
   };
 
   return (
-    <div className="w-[400px] rounded-lg text-center bg-gray-100 modal-custom translate-y-2/4 p-10">
+    <div className="w-[400px] rounded-lg text-center bg-gray-100 modal-custom translate-y-2/4 p-10 border ">
       <h1 className="text-3xl font-bold mb-10   ">Login</h1>
       <Form
         name="normal_login"
-        className="login-form"
+        className="login-form "
         onFinish={onFinish}
         initialValues={loginForm}
       >
@@ -51,6 +51,7 @@ const LoginView = () => {
           ]}
         >
           <Input
+            className="border border-black"
             prefix={<UserOutlined className="site-form-item-icon" />}
             placeholder="Email"
             name="email"
@@ -67,6 +68,7 @@ const LoginView = () => {
           ]}
         >
           <Input
+            className="border border-black"
             prefix={<LockOutlined className="site-form-item-icon" />}
             type="password"
             placeholder="Password"
