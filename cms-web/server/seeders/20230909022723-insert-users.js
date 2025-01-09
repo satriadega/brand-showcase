@@ -1,5 +1,7 @@
 "use strict";
 
+const { encrypt } = require("../helpers/password");
+
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
@@ -15,7 +17,7 @@ module.exports = {
         {
           username: "satriadega",
           email: "admin@mail.com",
-          password: "admin",
+          password: encrypt("admin"),
           role: "admin",
           phoneNumber: 55555,
           address: "Jl. Kasturi no. 5",
