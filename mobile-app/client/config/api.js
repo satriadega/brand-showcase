@@ -1,1 +1,1 @@
-export const API_URL = "https://satriadegaserver.click";
+export const API_URL = "http://localhost:4000"; //graphql

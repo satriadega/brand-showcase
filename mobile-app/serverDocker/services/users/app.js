@@ -5,7 +5,7 @@ const cors = require("cors");
 const PORT = process.env.PORT || 4001;
 const app = express();
 const { connect, getDB } = require("./config/mongoConnection.js");
-const routes = require("./routes");
+const routes = require("./routes/index.js");
 
 app.use(cors());
 app.use(express.json());
