@@ -1,4 +1,4 @@
-# Project Setup Instructions for `brand-showcase/mobile-app/server/services/users`
+# Project Setup Instructions for `brand-showcase/mobile-app/serverDocker/services/users`
 
 ## Steps to Run the Project
 

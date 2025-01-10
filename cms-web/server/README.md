@@ -1,4 +1,4 @@
-# Project Setup Instructions `brand-showcase/mobile-app/serverDocker/services/app`
+# Project Setup Instructions `brand-showcase/cms-web/server`
 
 ## Steps to Run the Project
 
@@ -8,8 +8,10 @@
 
 2. Make the setup script executable:
    ```bash
-   chmod +x setup.sh
+   chmod +x dbsetup-sequelize.sh #for db-setup
+   chmod +x dbdrop-sequelize.sh #for db-drop
 3. Run the setup script:
    ```bash
-   ./setup.sh
+   npm install
+   ./dbsetup-sequelize.sh
    npm start
