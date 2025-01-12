@@ -31,4 +31,34 @@ Clone of the CNN Indonesia website and mobile application. An application (web-b
 
 `server` : [cms-web/server/README.md](cms-web/server/README.md)
 
+## Application Demo Mobile-App
+
+currently not available because the project is using old dependencies 12/1/2025
+
+## Technical Overview
+
+### Tech Stack Mobile-App
+
+client-mobile-app:
+- expo
+- react-native
+- apollo-client(graphql)
+
+serverDocker/orchestrator-express and serverDocker/orchestrator-graphql dependent on serverDocker/services/app and serverDocker/services/users, `both services app and users must be turn on!!`
+
+serverDocker/orchestrator-express:
+- express
+- redis
+- mongodb
+- postgresql
+
+serverDocker/orchestrator-graphql:
+- express
+- graphql
+- redis
+- mongodb
+- postgresql
+
+`orchestrator-express` is used for backend http request, and `orchestrator-graphql` is used for the Mobile-App client app.
+
 Created by : satriadega

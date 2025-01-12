@@ -12,7 +12,7 @@ COPY package.json package-lock.json /app/
 
 RUN npm install nodemon -g
 RUN npm install
-RUN export DATABASE_URL=postgresql://postgres:1tz2DPC3Ya2ihAiE@db.kawkkynedrcphkmvdxyp.supabase.co:5432/postgres
+# RUN export DATABASE_URL=postgresql://postgres:1tz2DPC3Ya2ihAiE@db.kawkkynedrcphkmvdxyp.supabase.co:5432/postgres
 
 COPY . .
 

@@ -12,9 +12,9 @@ services:
     environment:
       - DATABASE_URL=${MONGO_DB_URL}
   orchestrator:
-    build: ./orchestrator
+    build: ./orchestrator-graphql
     ports:
-      - "80:4000"
+      - "3005:4000"
     environment:
       - POSTS_SERVICE_URL=http://service-app:4002
       - USER_SERVICE_URL=http://service-users:4001

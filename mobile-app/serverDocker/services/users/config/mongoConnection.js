@@ -1,7 +1,9 @@
 const { MongoClient, ServerApiVersion } = require("mongodb");
 
-const uri = "mongodb://localhost:6664";
-// const uri = process.env.MONGO_DB_URL;
+const uri =
+  process.env.NODE_ENV === "production"
+    ? "mongodb://172.17.0.1:6664"
+    : "mongodb://localhost:6664";
 let db;
 
 const client = new MongoClient(uri, {
