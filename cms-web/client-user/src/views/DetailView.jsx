@@ -36,7 +36,7 @@ const DetailView = () => {
     <>
       <div
         style={{
-          maxWidth: "1200px",
+          maxWidth: "1000px",
           margin: "0 auto",
           whiteSpace: "pre-wrap",
         }}

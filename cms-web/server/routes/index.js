@@ -10,7 +10,7 @@ router.post("/login", ControllerUser.login);
 router.get("/posts", ControllerPost.getPosts);
 router.get("/posts/:id", ControllerPost.getPostById);
 router.use(authentication);
-router.post("/users", ControllerUser.createAdmin);
+router.post("/admins", ControllerUser.createAdmin);
 router.post("/posts", ControllerPost.createPost);
 router.put("/posts/:id", ControllerPost.updatePostById);
 router.delete("/posts/:id", ControllerPost.deletePostById);

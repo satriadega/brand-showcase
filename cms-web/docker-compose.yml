@@ -1,0 +1,59 @@
+version: "3.8"
+
+services:
+  traefik:
+    image: traefik:v2.10
+    command:
+      - "--api.insecure=true"
+      - "--providers.docker=true"
+      - "--entrypoints.web.address=:80"
+    ports:
+      - "80:80"
+      - "8080:8080" # Traefik dashboard
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock:ro"
+
+  postgres:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: P3-C1
+    ports:
+      - "6662:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  server:
+    build: ./server
+    ports:
+      - "3000:3000"
+    environment:
+      NODE_ENV: production
+      DATABASE_URL: postgres://root:root@postgres:5432/P3-C1-PROD
+    depends_on:
+      - postgres
+    labels:
+      - "traefik.http.routers.server.rule=Host(`localhost`)"
+      - "traefik.http.services.server.loadbalancer.server.port=3000"
+
+  client-user:
+    build: ./client-user
+    ports:
+      - "5173:80"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.client-user.rule=Host(`localhost`) && PathPrefix(`/user`)"
+      - "traefik.http.services.client-user.loadbalancer.server.port=5173"
+
+  client-admin:
+    build: ./client-admin
+    ports:
+      - "5174:80"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.client-admin.rule=Host(`localhost`) && PathPrefix(`/admin`)"
+      - "traefik.http.services.client-admin.loadbalancer.server.port=5174"
+
+volumes:
+  postgres_data:

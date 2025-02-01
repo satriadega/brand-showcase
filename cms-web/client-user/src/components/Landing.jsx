@@ -7,9 +7,10 @@ const Landing = ({ post }) => {
       onClick={() => {
         navigate(`/${post.slug}T${post.id}`);
       }}
+      style={{ width: "800px", margin: "40px auto" }}
     >
       <p
-        className="text-center font-bold text-4xl text-blue-900 mb-8"
+        className="text-center font-bold text-5xl text-blue-900 mb-8"
         style={{ paddingTop: "40px" }}
       >
         HEADLINE
