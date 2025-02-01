@@ -24,13 +24,16 @@ const PostView = () => {
       <tr key={el.id}>
         <td scope="row">#{index + 1}</td>
         <td className="fw-bold">
-          <div style={{ width: "200px" }}>{el.title}</div>
+          <div style={{ maxWidth: "200px" }}>{el.title}</div>
         </td>
         <td>
           <img src={el.imgUrl} style={{ width: "100%" }} className="rounded" />
         </td>
         <td>
-          <div className=" wrap" style={{ width: "300px", overflowY: "auto" }}>
+          <div
+            className=" wrap"
+            style={{ overflowY: "scroll", maxHeight: "300px" }}
+          >
             <p>{el.content}</p>
           </div>
         </td>
@@ -53,7 +56,7 @@ const PostView = () => {
             <a href="" className="">
               <button
                 style={{ width: "60px" }}
-                className="bg-blue-600 py-2 rounded-lg mb-3"
+                className="bg-blue-600 py-2 rounded-lg mb-3 font-bold"
                 onClick={async (e) => {
                   e.preventDefault();
                   setIsEdit(true);
@@ -77,7 +80,7 @@ const PostView = () => {
             </a>
             <a href="" className="">
               <button
-                className="bg-red-600 py-2 rounded-lg"
+                className="bg-red-600 py-2 rounded-lg font-bold"
                 style={{ width: "60px" }}
                 onClick={(e) => {
                   e.preventDefault();
@@ -95,10 +98,12 @@ const PostView = () => {
 
   return (
     <>
-      <h2 style={{ textAlign: "center" }} className="text-3xl mt-10">
+      <h2
+        style={{ textAlign: "center", color: "black" }}
+        className="text-4xl mt-10 font-bold"
+      >
         Posts List
       </h2>
-
       <div
         className="table-responsive-lg"
         style={{
@@ -115,7 +120,10 @@ const PostView = () => {
               setIsEdit(false);
               handleOpen();
             }}
-            className="bg-blue-500 font-bold mr-4"
+            style={{
+              backgroundColor: "#0066CB",
+            }}
+            className="font-bold mr-4 text-white"
           >
             Create New Post
           </Button>

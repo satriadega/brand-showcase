@@ -26,12 +26,14 @@ const Sidebar = () => {
         // console.log(collapsed, type);
       }}
     >
-      <img
-        src="https://cdn.cnnindonesia.com/cnnid/images/logo.webp?v=10.10.5"
-        alt="cnn logo"
-        className="w-full h-[160px] mb-10 p-3"
-        style={{ borderRadius: "20px" }}
-      />
+      <div className="flex justify-center">
+        <img
+          src="https://cdn.cnnindonesia.com/cnnid/images/logo.webp?v=10.10.5"
+          alt="cnn logo"
+          className="w-32 h-32 mb-10 p-3"
+          style={{ borderRadius: "20px" }}
+        />
+      </div>
       <div className="text-white font-semibold  text-base flex flex-col gap-2">
         <NavLink
           to="/"

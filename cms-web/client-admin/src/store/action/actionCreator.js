@@ -164,7 +164,7 @@ export function updatePost(payload, id) {
 }
 
 export function login(payload) {
-  return async (dispatch) => {
+  return async () => {
     try {
       const response = await fetch(`${API_URL}/login`, {
         method: "POST",
